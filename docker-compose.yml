@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+   app:
+      command: ["rails", "server"]
+      build: .
+      mem_limit: 838860800
+      ports:
+         - '3333:3000'
+      volumes:
+         - ./:/rails-tutorial
+      stdin_open: true
+      tty: true
+
