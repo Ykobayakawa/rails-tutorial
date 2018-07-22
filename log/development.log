@@ -222,3 +222,666 @@ Processing by ApplicationController#goodbye as HTML
 Completed 200 OK in 2ms (Views: 1.5ms)
 
 
+Started GET "/" for 172.22.0.1 at 2018-07-22 07:43:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#goodbye as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.9ms)
+
+
+Started GET "/" for 172.23.0.1 at 2018-07-22 07:44:43 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#goodbye as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 139ms (Views: 3.4ms)
+
+
+Started GET "/" for 172.23.0.1 at 2018-07-22 07:44:46 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#goodbye as HTML
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms)
+
+
+Started GET "/" for 172.23.0.1 at 2018-07-22 07:44:47 +0000
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#goodbye as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180722074927)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180722074927"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-22 07:50:28.808198"], ["updated_at", "2018-07-22 07:50:28.808198"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.24.0.1 at 2018-07-22 07:50:58 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#goodbye as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 8ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.24.0.1 at 2018-07-22 07:51:01 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#goodbye as HTML
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user" for 172.24.0.1 at 2018-07-22 07:51:45 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 172.24.0.1 at 2018-07-22 07:52:03 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ApplicationController#goodbye as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 172.24.0.1 at 2018-07-22 07:52:09 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 340ms (Views: 336.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 172.24.0.1 at 2018-07-22 07:52:53 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (10.5ms)
+  Rendered users/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 45ms (Views: 31.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1" for 172.24.0.1 at 2018-07-22 07:52:58 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 10ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/users_controller.rb:67:in `set_user'
+Started GET "/users/" for 172.24.0.1 at 2018-07-22 07:53:36 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 172.24.0.1 at 2018-07-22 07:53:38 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.6ms)
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 172.24.0.1 at 2018-07-22 07:53:49 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nEwS9r40YGrUbyg7jSnfYoGpetn1ujSXGcbTd2kKaScaiwSXrYhbREg7zOPttAWydPkl5LkAzS9kRLTQpf+NJw==", "user"=>{"name"=>"unko", "email"=>"unko@unko.com"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "unko"], ["email", "unko@unko.com"], ["created_at", "2018-07-22 07:53:49.282321"], ["updated_at", "2018-07-22 07:53:49.282321"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3333/users/1
+Completed 302 Found in 15ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/users/1" for 172.24.0.1 at 2018-07-22 07:53:49 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1/edit" for 172.24.0.1 at 2018-07-22 07:53:55 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/1" for 172.24.0.1 at 2018-07-22 07:53:58 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yYfKMIPkUnSC3esK1s4/aiTvP3X9XzFIfJj8+AqAM5CAXWOFTEHmqZjPAsJ1Nc/W2Y3ZhetusyTJYcF3eL64aQ==", "user"=>{"name"=>"unko", "email"=>"unko@unko.com"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3333/users/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 172.24.0.1 at 2018-07-22 07:53:58 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 172.24.0.1 at 2018-07-22 07:54:45 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 172.24.0.1 at 2018-07-22 07:54:58 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJ6fzNrQc7HigMPUHIpleTnB8lADbde2vfoK4ea39GmbTX9qNwbwqcDe1hDNE/06P5bUwmYdwbmX8gmaDHYs5g==", "user"=>{"name"=>"tintin", "email"=>"tintin@tintin.com"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "tintin"], ["email", "tintin@tintin.com"], ["created_at", "2018-07-22 07:54:58.501934"], ["updated_at", "2018-07-22 07:54:58.501934"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3333/users/2
+Completed 302 Found in 25ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/users/2" for 172.24.0.1 at 2018-07-22 07:54:58 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for 172.24.0.1 at 2018-07-22 07:55:06 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=edit):
+  
+app/controllers/users_controller.rb:67:in `set_user'
+Started GET "/users/" for 172.24.0.1 at 2018-07-22 07:55:09 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 172.24.0.1 at 2018-07-22 07:55:13 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 172.24.0.1 at 2018-07-22 07:55:15 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 172.24.0.1 at 2018-07-22 07:55:24 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (10.0ms)
+  Rendered users/edit.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 41ms (Views: 36.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 172.24.0.1 at 2018-07-22 07:56:41 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.3ms)
+  Rendered users/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 172.24.0.1 at 2018-07-22 07:56:56 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"39livherUNwJFeTB0VT045xxCq3uyo52wVLPBKIFVt9ZHnTfBBdr8pVBABmxyS4zaSFVkKJwd8680KijbvCy3w==", "user"=>{"name"=>"aaaa", "email"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "aaaa"], ["email", ""], ["created_at", "2018-07-22 07:56:56.633356"], ["updated_at", "2018-07-22 07:56:56.633356"]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3333/users/3
+Completed 302 Found in 25ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/users/3" for 172.24.0.1 at 2018-07-22 07:56:56 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 25.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 172.24.0.1 at 2018-07-22 07:57:00 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/3" for 172.24.0.1 at 2018-07-22 07:57:07 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FNPxbwOdLkWp6YXoOty8EKs1oHcDbWqs7H6k9meCtXIPABHJ7kutXYu3kCzrRSRTrWKG5WYdfKPGdqeNjUNt/Q==", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3333/users
+Completed 302 Found in 21ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/users" for 172.24.0.1 at 2018-07-22 07:57:07 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 172.24.0.1 at 2018-07-22 08:06:33 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 172.24.0.1 at 2018-07-22 08:06:38 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 44ms (Views: 40.8ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMicroposts (20180722082726)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180722082726"]]
+  [1m[35m (17.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.24.0.1 at 2018-07-22 08:30:31 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 172.24.0.1 at 2018-07-22 08:30:33 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 172.24.0.1 at 2018-07-22 08:31:20 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/micropost" for 172.24.0.1 at 2018-07-22 08:31:27 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/micropost"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/microposts" for 172.24.0.1 at 2018-07-22 08:31:40 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.6ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 49ms (Views: 39.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/microposts/new" for 172.24.0.1 at 2018-07-22 08:31:54 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (6.0ms)
+  Rendered microposts/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 44ms (Views: 24.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/microposts" for 172.24.0.1 at 2018-07-22 08:32:10 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"miepTxfzORIxGAS99+RCcQbxxv9tkOij0Jc/0u3r5/zBZWNQsm4TRLohJE9iRETisjExSyd6bef+tmqZQLHQpw==", "micropost"=>{"content"=>"tintintin", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.1ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "tintintin"], ["user_id", 1], ["created_at", "2018-07-22 08:32:10.900356"], ["updated_at", "2018-07-22 08:32:10.900356"]]
+  [1m[35m (14.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3333/microposts/1
+Completed 302 Found in 29ms (ActiveRecord: 18.6ms)
+
+
+Started GET "/microposts/1" for 172.24.0.1 at 2018-07-22 08:32:10 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/microposts/1/edit" for 172.24.0.1 at 2018-07-22 08:34:10 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering microposts/edit.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (4.2ms)
+  Rendered microposts/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 49ms (Views: 44.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/microposts/1" for 172.24.0.1 at 2018-07-22 08:34:21 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NhJCNx3+tBKY/jBhxbGtkFj2eCpWc6C91d5KgewvEVt1CtQAb1SnCpFnhgQTDCqOzNHVLnGPK/Z4VQuqbYn0hQ==", "micropost"=>{"content"=>"unkounkounko", "user_id"=>"1"}, "commit"=>"Update Micropost", "id"=>"1"}
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[33mUPDATE "microposts" SET "content" = ?, "updated_at" = ? WHERE "microposts"."id" = ?[0m  [["content", "unkounkounko"], ["updated_at", "2018-07-22 08:34:21.774175"], ["id", 1]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3333/microposts/1
+Completed 302 Found in 37ms (ActiveRecord: 19.8ms)
+
+
+Started GET "/microposts/1" for 172.24.0.1 at 2018-07-22 08:34:21 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 50ms (Views: 44.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/microposts/new" for 172.24.0.1 at 2018-07-22 08:34:30 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (2.5ms)
+  Rendered microposts/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/microposts" for 172.24.0.1 at 2018-07-22 08:34:43 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iGhTP2PRFTg5JeC4VtOsuc6Yzx6qxVWfLhny+5cEYm6Tu7OZjgeWIBt79XyHSjT6yM/pjM+1Q5AEEfGAfcW64Q==", "micropost"=>{"content"=>"tintintin", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "tintintin"], ["user_id", 1], ["created_at", "2018-07-22 08:34:43.334827"], ["updated_at", "2018-07-22 08:34:43.334827"]]
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3333/microposts/2
+Completed 302 Found in 34ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/microposts/2" for 172.24.0.1 at 2018-07-22 08:34:43 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMicropost Load (0.5ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/microposts/" for 172.24.0.1 at 2018-07-22 08:35:07 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/microposts/new" for 172.24.0.1 at 2018-07-22 08:35:14 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (4.9ms)
+  Rendered microposts/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/microposts" for 172.24.0.1 at 2018-07-22 08:35:18 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F9EGc83lZ3hQi78ooMFVqEolwiLMfqUvBGz5wVvUO0pMk8xsaHhNLtuyn9o1YVM7/uU1loaUIGsqTayK9o4MEQ==", "micropost"=>{"content"=>"adfsagfs", "user_id"=>"2"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "adfsagfs"], ["user_id", 2], ["created_at", "2018-07-22 08:35:18.895647"], ["updated_at", "2018-07-22 08:35:18.895647"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3333/microposts/3
+Completed 302 Found in 30ms (ActiveRecord: 19.1ms)
+
+
+Started GET "/microposts/3" for 172.24.0.1 at 2018-07-22 08:35:18 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 48ms (Views: 43.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/microposts/" for 172.24.0.1 at 2018-07-22 08:35:23 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/microposts/1" for 172.24.0.1 at 2018-07-22 09:01:44 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/microposts" for 172.24.0.1 at 2018-07-22 09:02:12 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.6ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 38ms (Views: 33.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/microposts/new" for 172.24.0.1 at 2018-07-22 09:12:35 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+SyntaxError (/rails-tutorial/app/models/micropost.rb:2: syntax error, unexpected ':', expecting keyword_end
+   varidates: content, length: { maximum: 1
+             ^):
+  
+app/models/micropost.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/microposts_controller.rb:17:in `new'
+Started GET "/microposts/new" for 172.24.0.1 at 2018-07-22 09:15:58 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+SyntaxError (/rails-tutorial/app/models/micropost.rb:2: syntax error, unexpected ':', expecting keyword_end
+   validates: content, length: { maximum: 1
+             ^):
+  
+app/models/micropost.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/microposts_controller.rb:17:in `new'
+Started GET "/microposts/new" for 172.24.0.1 at 2018-07-22 09:16:18 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#new as HTML
+Completed 500 Internal Server Error in 5ms
+
+
+  
+SyntaxError (/rails-tutorial/app/models/micropost.rb:2: syntax error, unexpected ':', expecting keyword_end
+   validates: content, length: { maximum: 1
+             ^):
+  
+app/models/micropost.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/microposts_controller.rb:17:in `new'
+Started GET "/microposts/new" for 172.24.0.1 at 2018-07-22 09:29:19 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (1.8ms)
+  Rendered microposts/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 30ms (Views: 17.9ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/microposts" for 172.24.0.1 at 2018-07-22 09:33:34 +0000
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u2H+QeBtCtjsI2ESpuMg9MLqDq4QQ/1Cfc1jX31Hd2igsh7nDbuJwM59dNZ3eri3xL0oPHUz601XxWAkl4av5w==", "micropost"=>{"content"=>"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "user_id"=>""}, "commit"=>"Create Micropost"}
+  [1m[35m (2.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (11.9ms)
+  Rendered microposts/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 90ms (Views: 74.8ms | ActiveRecord: 2.8ms)
+
+
