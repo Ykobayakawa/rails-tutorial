@@ -1,5 +1,13 @@
 class User < ApplicationRecord
    has_many :microposts, dependent: :destroy
+   has_many :active_relationships, class_name: "Relationship",
+                                   foreign_key: "follower_id",
+                                   dependent: :destroy   #14.2
+   has_many :passive_relationships, class_name: "Relationship",
+                                    foreign_key: "followed_id",
+                                    dependent: :destroy  #14.12
+   has_many :following, through: :active_relationships, source: :followed  #14.8
+   has_many :followers, through: :passive_relationships, source: :follower #14.12
    attr_accessor :remember_token
    before_save { self.email = email.downcase } #email属性を小文字にしてメアドの一意性を保証
    validates :name, presence: true, length: { maximum: 50 }
@@ -43,8 +51,27 @@ class User < ApplicationRecord
 
    # 試作feedの定義
    # 完全な実装は次章の「ユーザーをフォローする」を参照
+   # 14.47
    def feed
-      Micropost.where("user_id = ?", id)  #SQL文に変数を代入する場合は常にエスケープする
+      following_ids = "SELECT followed_id FROM relationships
+                       WHERE follower_id = :user_id"
+      Micropost.where("user_id IN (#{following_ids})
+                       OR user_id = :user_id", user_id: id)
+   end
+
+   # ユーザーをフォロー
+   def follow(other_user)
+      active_relationships.create(followed_id: other_user.id)
+   end
+
+   #ユーザーをフォロー解除
+   def unfollow(other_user)
+      active_relationships.find_by(followed_id: other_user.id).destroy
+   end
+
+   # 現在のユーザーがフォローしてたらtrueを返す
+   def following?(other_user)
+      following.include?(other_user)
    end
 
 end
